@@ -1,6 +1,6 @@
 # pg_sample_ext
 
-pg_sample_ext is a PostgreSQL extension that provides a sample function to demonstrate extending PostgreSQL's functionality. The extension includes a custom function to calculate the square of a number and introduces new features in version 1.0.1.
+pg_sample_ext is a PostgreSQL extension that provides a sample function to demonstrate extending PostgreSQL's functionality.
 
 ## Installation
 
@@ -16,10 +16,8 @@ $ cd pg_sample_ext
 
 4. Build and install the extension:
 
-```
-$ make
-$ make install
-```
+    $ make
+    $ make install
 
 5. Enable the extension: 
 
@@ -60,6 +58,14 @@ INSERT INTO status_table (status) VALUES ('active');
 
 ```
 INSERT INTO quant_table (quantity) VALUES (10);
+```
+
+###  Custom Operator (@*):
+- The extension introduces a custom operator `@*` that performs a custom operation, such as multiplication, on values of a specific type.
+-- It multiplies two values of type my_type and returns a value of the same type.
+
+```
+SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
 ```
 
 ### Contributing

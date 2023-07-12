@@ -1,4 +1,4 @@
--- regression test script for pg_sample_ext (version 1.0.1)
+-- regression test script for pg_sample_ext (version 1.0.2)
 
 -- Create the extension
 CREATE EXTENSION pg_sample_ext;
@@ -42,4 +42,7 @@ INSERT INTO positive_integer_table (value)
 VALUES (42);
 
 SELECT * FROM positive_integer_table;
+
+-- Test case 6: Verify the @* operator
+SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
 

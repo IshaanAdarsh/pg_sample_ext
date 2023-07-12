@@ -15,6 +15,7 @@ This document provides an overview of the changes made in each version of the pg
 - Introduced the `status_type` enumerated type with values 'active', 'inactive', and 'pending'.
 - Added the `positive_integer` domain type for representing positive integers.
 
-### Bug Fixes
+## Version 1.0.2
 
-- Fixed issue with function behavior in certain edge cases.
+### New Features
+- Added a custom operator `@*` for performing multiplication on values of type `my_type`.
